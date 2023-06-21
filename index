@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>アカウント作成</title>
+  <style>
+    /* スタイルを追加 */
+  </style>
+</head>
+<body>
+  <h1>アカウント作成</h1>
+
+  <form id="signupForm">
+    <label for="username">ユーザー名:</label>
+    <input type="text" id="username" required><br>
+    <label for="password">パスワード:</label>
+    <input type="password" id="password" required><br>
+    <button type="submit">アカウント作成</button>
+  </form>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // アカウント作成処理を実行する
+      createAccount(username, password);
+    });
+
+    function createAccount(username, password) {
+      // ここにアカウント作成処理を追加する
+      // 実際のサーバーでは、ユーザー名とパスワードを保存し、適切なレスポンスを返す処理を実装する
+
+      alert('アカウントが作成されました。');
+
+      // リロードする
+      location.reload();
+    }
+  </script>
+</body>
+</html>
